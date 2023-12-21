@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "core",
     "services.apps.ServicesConfig",
     "social.apps.SocialConfig",
+    "pages.apps.PagesConfig",
     
 ]
 
@@ -68,6 +69,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                #* añade el processors de social
+                "social.processors.ctx_dict",
             ],
         },
     },
